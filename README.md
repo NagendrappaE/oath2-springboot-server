@@ -20,3 +20,12 @@ Spring client-server-OpenFinance API consume.
 -Djavax.net.debug=all -Djavax.net.ssl.keyStore=/home/nagendrappae/Documents/openFinance/finAxisPKCS12.pfx -Djavax.net.ssl.keyStorePassword=Flux@123 -Djavax.net.ssl.trustStore=/home/nagendrappae/Documents/openFinance/altareqTruststore.jks -Djavax.net.ssl.trustStorePassword=Flux@123
 
 
+Consent autherization:
+http://localhost:8080/api/login/caap
+
+
+Accesssing payment Url:
+http://localhost:8080/api/login/payment/<GrantTokenId>/<ConsentId>
+http://localhost:8080/api/login/payment/1a7a623d-b2fa-4e45-befe-a2b63cabca63/463110f1-dfb4-4a5e-9c39-ca484224fa29
+
+
