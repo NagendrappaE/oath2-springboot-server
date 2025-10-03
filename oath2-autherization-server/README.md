@@ -1,0 +1,1 @@
+curl -X POST http://localhost:8080/oauth2/token   -u emandate-switch:secret   -H "Content-Type: application/x-www-form-urlencoded"   -d "grant_type=client_credentials&scope=account-enquiry:read
