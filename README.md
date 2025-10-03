@@ -11,3 +11,12 @@ curl -X GET http://localhost:8081/account-enquiry/secure -H "Authorization: Bear
 This is a secure endpoint, accessible only with 'account-enquiry:read'
 
 
+Spring client-server-OpenFinance API consume.
+
+ The below comand to run the jar  ensure the mtls(2 way ssl handshake)
+ javax.net.ssl.keyStore -->Contains the PrivateKey and Public Key of the client used for the MTLS.
+ javax.net.ssl.trustStore--> constains server's CA/Public certificate (Altareq's public cert and Amazon CA certificate(jkws))
+ 
+-Djavax.net.debug=all -Djavax.net.ssl.keyStore=/home/nagendrappae/Documents/openFinance/finAxisPKCS12.pfx -Djavax.net.ssl.keyStorePassword=Flux@123 -Djavax.net.ssl.trustStore=/home/nagendrappae/Documents/openFinance/altareqTruststore.jks -Djavax.net.ssl.trustStorePassword=Flux@123
+
+
