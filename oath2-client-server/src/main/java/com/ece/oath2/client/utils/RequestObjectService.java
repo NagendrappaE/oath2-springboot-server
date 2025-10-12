@@ -3,7 +3,6 @@ package com.ece.oath2.client.utils;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
-import java.security.SecureRandom;
 import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
 import java.time.Instant;
@@ -64,10 +63,7 @@ public class RequestObjectService {
 	}
 
 	public static String generateCodeVerifier() {
-		SecureRandom sr = new SecureRandom();
-		byte[] code = new byte[32]; // 32 bytes ~ 43 chars when base64url encoded
-		sr.nextBytes(code);
-		return Base64.getUrlEncoder().withoutPadding().encodeToString(code);
+		return UUID.randomUUID().toString();
 	}
 
 	public static String generateCodeChallenge(String codeVerifier) throws Exception {
